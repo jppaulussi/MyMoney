@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Banco MyMoney</title>
+        <!-- link para o BootStrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+
+    <body>
+
+        <header class="bg-danger p-4">
+           <h1 class="display-4 text-light">MyMoney</h1>
+        </header>
+
+        <div class="container-fluid">
+            <section class="my-4 mx-1">
+                <h2>Resumo Consolidado</h2>
+                <table id="resumo" class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr id="cabecalho">
+                            <th class="nome-cliente">Cliente</th>
+                            <th class="tipo-operacao">Operação</th>
+                            <th class="valor-credito">Valor Creditado</th>
+                            <th class="saldo-anterior">Saldo Anterior</th>
+                            <th class="saldo-atual">Saldo Atualizado</th>
+                        </tr>
+                    </thead>
+                    <tbody class="historico">                       
+                    </tbody>
+                </table>
+            </section> 
+            
+             <section class="row mb-3">
+                 <h2 class="mt-4 pl-3">                   
+                     Cadastrar Operações
+                 </h2>
+                 <form class="col-12">
+                     <div class="form-group">
+                         <label for="nome">Nome do Cliente</label>
+                         <input type="text" class="form-control" id="form-nome" placeholder="ex: Severus Snape" required>
+                     </div>
+                     
+                     <div class="form-row">
+                         <div class="form-group col-md-4">
+                             <label for="form-tipo">Tipo de Operacao</label>
+                             <select id="form-tipo" class="form-control" required>
+                                   <option value="Depósito">Depósito</option>                   
+                                   <option value="DOC">DOC</option> 
+                                   <option value="TED">TED</option> 
+                                   <option value="Outros">Outros</option> 
+                                </select>
+                            </div>
+                           
+                         <div class="form-group col-md-4">
+                             <label for="form-credito">Valor Creditado</label>
+                             <input type="number" class="form-control"  id="form-credito"
+                                 placeholder="ex: 1000" required>
+                         </div>
+
+                         <div class="form-group col-md-4">
+                             <label for="form-saldo">Saldo Anterior</label>
+                             <input type="number" class="form-control" id="form-saldo"
+                                 placeholder="ex: 1000" required>
+                         </div>
+
+                     </div>
+
+                     <div class="d-flex justify-content-end mt-3">
+                         <button type="submit" class="btn btn-primary mr-2">Confirmar</button>                         
+                     </div>
+                 </form>
+        </div>
+
+
+        <!-- LINKANDO O JAVASCRIPT -->
+        <!-- <script src="./js/app.js"></script> -->
+        <script src="./js/app.js"></script>
+    </body>
+
+</html>
